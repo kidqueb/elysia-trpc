@@ -65,8 +65,6 @@ export const trpc =
 
         const observers: Map<string, Unsubscribable> = new Map()
 
-        // @ts-ignore
-        if (app.wsRouter)
             app.ws<any, any>(endpoint, {
                 async message(ws, message) {
                     const messages: TRPCClientIncomingRequest[] = Array.isArray(
